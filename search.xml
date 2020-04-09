@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello!新来的你!</title>
+    <url>/2017/09/11/hello/</url>
+    <content><![CDATA[<p>欢迎来到付硕的<a href="https://fushuo.xyz/" target="_blank" rel="noopener">老窝</a>! 感谢您的来访,您的到来让我的家蓬荜生辉 !<br>我与春风皆过客，你携秋水揽星河。</p>
+<h3 id="先来点干货"><a href="#先来点干货" class="headerlink" title="先来点干货"></a><em>先来点干货</em></h3><blockquote>
+<p>人生漫漫有时伤感。<br>不要在意那些细枝末节，它们都会在时间的长河里消失殆尽。<br>好好活着，丰富多彩地活着，你正活生生地活着。（今夕何夕）</p>
+</blockquote>
+<blockquote>
+<p>以后的路还很长，以后很长的路也会戛然而止。<br>所以，我视你为珍爱，让你的笑和泪流在我脸上。<br>在每一次入睡前，捏你的手，说：晚安晚安，梦中见。（海桑）</p>
+</blockquote>
+<blockquote>
+<p>我们还年轻，年轻就可以失败。(谁的青春不迷茫 刘同)</p>
+</blockquote>
+ <a id="more"></a>
+
+<blockquote>
+<p>不管在这个难以理解的世界上是多么坎坷、多么愁闷，它仍然是美好的，<br>我们毕竟都热望能成为幸福的人，彼此相爱。（阿尔谢尼耶夫的一生 蒲宁）</p>
+<blockquote>
+<p>你不是太敏感，你也不是反应过度。<br>如果你受到了伤害，那就是受到了伤害。</p>
+</blockquote>
+</blockquote>
+<iframe height="400" width="600" src="//player.bilibili.com/player.html?aid=32659894&bvid=BV1gW411S7px&cid=57153187&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+]]></content>
+      <categories>
+        <category>修身</category>
+      </categories>
+      <tags>
+        <tag>毒鸡汤</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS基础问题</title>
     <url>/2020/04/09/CSS%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h2 id="CSS部分基础问题整理"><a href="#CSS部分基础问题整理" class="headerlink" title="CSS部分基础问题整理"></a>CSS部分基础问题整理</h2><h3 id="1-选择器权重潜规则"><a href="#1-选择器权重潜规则" class="headerlink" title="1. 选择器权重潜规则"></a>1. 选择器权重潜规则</h3><h4 id="谁的权重更大，谁才会生效。"><a href="#谁的权重更大，谁才会生效。" class="headerlink" title="谁的权重更大，谁才会生效。"></a>谁的权重更大，谁才会生效。</h4><p>！important带有这个属性的优先级是最高的。<br>    内联样式。直接写在元素属性上的样式的优先级更高。<br>    同等权重下，后写的优先级生效。<br>    具体排序：！important&gt;行内样式&gt;ID选择器&gt;类选择器&gt;元素选择器&gt;通配符选择器（用星号*表示）&gt;继承&gt;浏览器默认属性</p>
@@ -49,23 +80,5 @@
       <tags>
         <tag>摄影</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/04/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
 </search>

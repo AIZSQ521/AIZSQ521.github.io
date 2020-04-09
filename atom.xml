@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>空</title>
+  <title>心</title>
   
   <subtitle>一面圆,一面缘</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -37,26 +37,6 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/04/07/hello-world/"/>
-    <id>http://yoursite.com/2020/04/07/hello-world/</id>
-    <published>2020-04-07T04:14:03.907Z</published>
-    <updated>2020-04-07T06:52:22.555Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>手机摄影学习笔记</title>
     <link href="http://yoursite.com/2018/06/20/%E6%89%8B%E6%9C%BA%E6%91%84%E5%BD%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/06/20/%E6%89%8B%E6%9C%BA%E6%91%84%E5%BD%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
@@ -76,6 +56,36 @@
     
     
       <category term="摄影" scheme="http://yoursite.com/tags/%E6%91%84%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello!新来的你!</title>
+    <link href="http://yoursite.com/2017/09/11/hello/"/>
+    <id>http://yoursite.com/2017/09/11/hello/</id>
+    <published>2017-09-11T11:22:49.000Z</published>
+    <updated>2020-04-09T12:42:30.147Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;欢迎来到付硕的&lt;a href=&quot;https://fushuo.xyz/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;老窝&lt;/a&gt;! 感谢您的来访,您的到来让我的家蓬荜生辉 !&lt;br&gt;我与春风皆过客，你携秋水揽星河。&lt;/p&gt;
+&lt;h3 id=&quot;先来点干货&quot;&gt;&lt;a href=&quot;#先来点干货&quot; class=&quot;headerlink&quot; title=&quot;先来点干货&quot;&gt;&lt;/a&gt;&lt;em&gt;先来点干货&lt;/em&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;人生漫漫有时伤感。&lt;br&gt;不要在意那些细枝末节，它们都会在时间的长河里消失殆尽。&lt;br&gt;好好活着，丰富多彩地活着，你正活生生地活着。（今夕何夕）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以后的路还很长，以后很长的路也会戛然而止。&lt;br&gt;所以，我视你为珍爱，让你的笑和泪流在我脸上。&lt;br&gt;在每一次入睡前，捏你的手，说：晚安晚安，梦中见。（海桑）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们还年轻，年轻就可以失败。(谁的青春不迷茫 刘同)&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="修身" scheme="http://yoursite.com/categories/%E4%BF%AE%E8%BA%AB/"/>
+    
+    
+      <category term="毒鸡汤" scheme="http://yoursite.com/tags/%E6%AF%92%E9%B8%A1%E6%B1%A4/"/>
     
   </entry>
   

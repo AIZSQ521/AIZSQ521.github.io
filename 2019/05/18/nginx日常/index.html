@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    学习 |  心
+    nginx日常 |  心
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -41,121 +41,269 @@
   <div id="app">
     <main class="content on">
       <section class="outer">
-  <article class="articles">
+  <article id="post-nginx日常" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">学习</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2019" class="archive-year">2019</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/05/18/nginx%E6%97%A5%E5%B8%B8/" class="archive-article-date">
-  <time datetime="2019-05-18T04:19:28.000Z" itemprop="datePublished">05/18</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2019/05/18/nginx%E6%97%A5%E5%B8%B8/"
-    >nginx日常</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  nginx日常
+</h1>
  
 
     </header>
     
+
+    
+    <div class="article-meta">
+      <a href="/2019/05/18/nginx%E6%97%A5%E5%B8%B8/" class="article-date">
+  <time datetime="2019-05-18T04:19:28.000Z" itemprop="datePublished">2019-05-18</time>
+</a>
       
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
   </div>
 
-    
-    
-  </div>
-</article>
       
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/04/02/linux%E6%97%A5%E5%B8%B8/" class="archive-article-date">
-  <time datetime="2019-04-02T06:33:45.000Z" itemprop="datePublished">04/02</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2019/04/02/linux%E6%97%A5%E5%B8%B8/"
-    >linux日常</a> 
-</h2>
- 
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">184</span>
+        </span>
+    </span>
 
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-  </div>
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
 
-    
-    
-  </div>
-</article>
-      
-  
-  
-  
-  </div>
-  </div>
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2018" class="archive-year">2018</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/20/%E6%89%8B%E6%9C%BA%E6%91%84%E5%BD%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  <time datetime="2018-06-20T02:49:56.000Z" itemprop="datePublished">06/20</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2018/06/20/%E6%89%8B%E6%9C%BA%E6%91%84%E5%BD%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-    >手机摄影学习笔记</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
       
     </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="关于Nginx-403-forbidden-错误踩的坑-directory-index-of-“-xx-xx-xx-“-is-forbidden"><a href="#关于Nginx-403-forbidden-错误踩的坑-directory-index-of-“-xx-xx-xx-“-is-forbidden" class="headerlink" title="关于Nginx 403 forbidden 错误踩的坑 directory index of “/xx/xx/xx/“ is forbidden"></a>关于Nginx 403 forbidden 错误踩的坑 directory index of “/xx/xx/xx/“ is forbidden</h2><p>server {<br>        listen xxx;<br>        server_name xxx.test.com;</p>
+<pre><code>    location / {
+
+    root /Downloads/Dokcers/b1/downloads;
+    autoindex on;       # &lt;----罪魁祸首，添加这个以后不再出现403错误
+    #index  index.php index.html;  
+
+    # auth 
+    auth_basic &quot;Please input B1 password&quot;;     # 设置加密登陆的提示
+    auth_basic_user_file /etc/nginx/xxx/.htpasswd;  # 设置加密的账号密码文件
+   }
+
+    # log
+    access_log /Downloads/Dokcers/b1/web/access.log;
+    error_log /Downloads/Dokcers/b1/web/error.log info;  # 打开这个模式有注意排错
+
+    # IP access  
+    allow 192.168.x.x/22;  # 限制IP段登陆
+    deny all;
+}</code></pre><h3 id="除了以上情况，还有403错误。需要排查的思路"><a href="#除了以上情况，还有403错误。需要排查的思路" class="headerlink" title="除了以上情况，还有403错误。需要排查的思路"></a>除了以上情况，还有403错误。需要排查的思路</h3><ol>
+<li><p>selinux</p>
+</li>
+<li><p>目录下有没有index.html 文件（如果有就需要配套有 index index.html ）</p>
+</li>
+<li><p>权限问题</p>
+</li>
+</ol>
+<p>喜欢的话给个star吧!<br> <iframe  
+style="margin-left: 2px; margin-bottom:-5px;"  
+frameborder="0" scrolling="0" width="100px" height="20px"  
+src="https://ghbtns.com/github-btn.html?user=AIZSQ521&repo=AIZSQ521.github.io&type=star&count=true" >  </p>
+</iframe>
+
+      
+      <!-- reward -->
+      
+      <div id="reward-btn">
+        打赏
+      </div>
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>版权声明： </strong>
+              本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/05/18/nginx%E6%97%A5%E5%B8%B8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li></ul>
+
+
+    </footer>
+
   </div>
+
   
+  
+  <nav class="article-nav">
+    
+      <a href="/2020/04/09/CSS%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            CSS基础问题
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2019/04/02/linux%E6%97%A5%E5%B8%B8/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">linux日常</div>
+      </a>
+    
+  </nav>
+
+
   
 
   
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: 'KujAX2V5v4iTQamIKruU6Hto-gzGzoHsz',
+        app_key: 'Es3F4aGHtrIvT2P2IYRiIRQP',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '\(^o^)/~来啊,快活啊!',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
 </section>
       <footer class="footer">
   <div class="outer">
@@ -313,6 +461,24 @@
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 
 

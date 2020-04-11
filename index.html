@@ -143,6 +143,185 @@
 
 </article>
     
+    <article id="post-nginx日常" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/05/18/nginx%E6%97%A5%E5%B8%B8/"
+    >nginx日常</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/05/18/nginx%E6%97%A5%E5%B8%B8/" class="article-date">
+  <time datetime="2019-05-18T04:19:28.000Z" itemprop="datePublished">2019-05-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="关于Nginx-403-forbidden-错误踩的坑-directory-index-of-“-xx-xx-xx-“-is-forbidden"><a href="#关于Nginx-403-forbidden-错误踩的坑-directory-index-of-“-xx-xx-xx-“-is-forbidden" class="headerlink" title="关于Nginx 403 forbidden 错误踩的坑 directory index of “/xx/xx/xx/“ is forbidden"></a>关于Nginx 403 forbidden 错误踩的坑 directory index of “/xx/xx/xx/“ is forbidden</h2><p>server {<br>        listen xxx;<br>        server_name xxx.test.com;</p>
+<pre><code>    location / {
+
+    root /Downloads/Dokcers/b1/downloads;
+    autoindex on;       # &lt;----罪魁祸首，添加这个以后不再出现403错误
+    #index  index.php index.html;  
+
+    # auth 
+    auth_basic &quot;Please input B1 password&quot;;     # 设置加密登陆的提示
+    auth_basic_user_file /etc/nginx/xxx/.htpasswd;  # 设置加密的账号密码文件
+   }
+
+    # log
+    access_log /Downloads/Dokcers/b1/web/access.log;
+    error_log /Downloads/Dokcers/b1/web/error.log info;  # 打开这个模式有注意排错
+
+    # IP access  
+    allow 192.168.x.x/22;  # 限制IP段登陆
+    deny all;
+}</code></pre><h3 id="除了以上情况，还有403错误。需要排查的思路"><a href="#除了以上情况，还有403错误。需要排查的思路" class="headerlink" title="除了以上情况，还有403错误。需要排查的思路"></a>除了以上情况，还有403错误。需要排查的思路</h3><ol>
+<li><p>selinux</p>
+</li>
+<li><p>目录下有没有index.html 文件（如果有就需要配套有 index index.html ）</p>
+</li>
+<li><p>权限问题</p>
+</li>
+</ol>
+<p>喜欢的话给个star吧!<br> <iframe  
+style="margin-left: 2px; margin-bottom:-5px;"  
+frameborder="0" scrolling="0" width="100px" height="20px"  
+src="https://ghbtns.com/github-btn.html?user=AIZSQ521&repo=AIZSQ521.github.io&type=star&count=true" >  </p>
+</iframe>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-linux日常" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/04/02/linux%E6%97%A5%E5%B8%B8/"
+    >linux日常</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/04/02/linux%E6%97%A5%E5%B8%B8/" class="article-date">
+  <time datetime="2019-04-02T06:33:45.000Z" itemprop="datePublished">2019-04-02</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h3 id="CentOS-6-8-su-root-后，输入密码提示Incorrect-Password，如何解决？"><a href="#CentOS-6-8-su-root-后，输入密码提示Incorrect-Password，如何解决？" class="headerlink" title="CentOS 6.8 su root 后，输入密码提示Incorrect Password，如何解决？"></a>CentOS 6.8 su root 后，输入密码提示Incorrect Password，如何解决？</h3><p>root密码是正确的<br>root密码是正确的</p>
+<blockquote>
+<p>解决:<br>在root账户下或者具有了root权限，可以查看/etc/pam.d/su<br>#auth required pam_wheel.so use_uid 这句是否被启用，如果启用了，那么加入了wheel组的用户（usermod -g wheel 用户id）才能su，否则就会提示密码错误。</p>
+</blockquote>
+<p> 喜欢的话给个star吧!<br> <iframe  
+style="margin-left: 2px; margin-bottom:-5px;"  
+frameborder="0" scrolling="0" width="100px" height="20px"  
+src="https://ghbtns.com/github-btn.html?user=AIZSQ521&repo=AIZSQ521.github.io&type=star&count=true" >  </p>
+</iframe>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
     <article id="post-手机摄影学习笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 

@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">107</span>
+            <span class="post-count">287</span>
         </span>
     </span>
 
@@ -107,9 +107,18 @@
       
 
       
-      <h3 id="CentOS-6-8-su-root-后，输入密码提示Incorrect-Password，如何解决？"><a href="#CentOS-6-8-su-root-后，输入密码提示Incorrect-Password，如何解决？" class="headerlink" title="CentOS 6.8 su root 后，输入密码提示Incorrect Password，如何解决？"></a>CentOS 6.8 su root 后，输入密码提示Incorrect Password，如何解决？</h3><p>root密码是正确的<br>root密码是正确的</p>
+      <h3 id="Linux执行-wget命令-提示command-not-found的两种解决方法"><a href="#Linux执行-wget命令-提示command-not-found的两种解决方法" class="headerlink" title="# Linux执行 wget命令:提示command not found的两种解决方法"></a># Linux执行 wget命令:提示command not found的两种解决方法</h3><blockquote>
+<p>1、rpm 安装<br>       下载wget的RPM包：<br><a href="http://mirrors.163.com/centos/6.8/os/x86_64/Packages/wget-1.12-8.el6.x86_64.rpm" target="_blank" rel="noopener">http://mirrors.163.com/centos/6.8/os/x86_64/Packages/wget-1.12-8.el6.x86_64.rpm</a><br>执行 rpm -ivh wget-1.12-8.el6.x86_64.rpm<br>2、yum安装<br>       yum -y install wget</p>
+</blockquote>
+<h3 id="CentOS-6-8-su-root-后，输入密码提示Incorrect-Password，如何解决？"><a href="#CentOS-6-8-su-root-后，输入密码提示Incorrect-Password，如何解决？" class="headerlink" title="# CentOS 6.8 su root 后，输入密码提示Incorrect Password，如何解决？"></a># CentOS 6.8 su root 后，输入密码提示Incorrect Password，如何解决？</h3><p>root密码是正确的<br>root密码是正确的</p>
 <blockquote>
 <p>解决:<br>在root账户下或者具有了root权限，可以查看/etc/pam.d/su<br>#auth required pam_wheel.so use_uid 这句是否被启用，如果启用了，那么加入了wheel组的用户（usermod -g wheel 用户id）才能su，否则就会提示密码错误。</p>
+</blockquote>
+<h3 id="CentOS-使用yum命令安装出现错误提示：Loaded-plugins-fastestmirror"><a href="#CentOS-使用yum命令安装出现错误提示：Loaded-plugins-fastestmirror" class="headerlink" title="# CentOS 使用yum命令安装出现错误提示：Loaded plugins: fastestmirror"></a># CentOS 使用yum命令安装出现错误提示：Loaded plugins: fastestmirror</h3><p> yum install的时候提示：Loaded plugins: fastestmirror</p>
+<p>fastestmirror是yum的一个加速插件，这里是插件提示信息是插件不能用了。</p>
+<p>不能用就先别用呗，禁用掉，先yum了再说。</p>
+<blockquote>
+<p>解决<br>1.修改插件的配置文件<br>vi /etc/yum/pluginconf.d/fastestmirror.conf<br>enabled = 1//由1改为0，禁用该插件<br>2.修改yum的配置文件<br>vi /etc/yum.conf<br>plugins=1//改为0，不使用插件</p>
 </blockquote>
 <p> 喜欢的话给个star吧!<br> <iframe  
 style="margin-left: 2px; margin-bottom:-5px;"  

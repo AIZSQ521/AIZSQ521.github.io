@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    CSS基础问题 |  心
+    微信小程序日常笔记 |  心
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -41,7 +41,7 @@
   <div id="app">
     <main class="content on">
       <section class="outer">
-  <article id="post-CSS基础问题" class="article article-type-post" itemscope
+  <article id="post-微信小程序日常笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -49,7 +49,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  CSS基础问题
+  微信小程序日常笔记
 </h1>
  
 
@@ -58,10 +58,14 @@
 
     
     <div class="article-meta">
-      <a href="/2020/04/09/CSS%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2020-04-09T08:31:45.020Z" itemprop="datePublished">2020-04-09</time>
+      <a href="/2019/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2019-12-11T12:55:12.000Z" itemprop="datePublished">2019-12-11</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </div>
+
       
       
 <div class="word_count">
@@ -69,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">275</span>
+            <span class="post-count">207</span>
         </span>
     </span>
 
@@ -103,14 +107,31 @@
       
 
       
-      <h2 id="CSS部分基础问题整理"><a href="#CSS部分基础问题整理" class="headerlink" title="CSS部分基础问题整理"></a>CSS部分基础问题整理</h2><h3 id="1-选择器权重潜规则"><a href="#1-选择器权重潜规则" class="headerlink" title="1. 选择器权重潜规则"></a>1. 选择器权重潜规则</h3><h4 id="谁的权重更大，谁才会生效。"><a href="#谁的权重更大，谁才会生效。" class="headerlink" title="谁的权重更大，谁才会生效。"></a>谁的权重更大，谁才会生效。</h4><p>！important带有这个属性的优先级是最高的。<br>    内联样式。直接写在元素属性上的样式的优先级更高。<br>    同等权重下，后写的优先级生效。<br>    具体排序：！important&gt;行内样式&gt;ID选择器&gt;类选择器&gt;元素选择器&gt;通配符选择器（用星号*表示）&gt;继承&gt;浏览器默认属性</p>
-<h3 id="2-雪碧图-css精灵-的作用"><a href="#2-雪碧图-css精灵-的作用" class="headerlink" title="2. 雪碧图(css精灵)的作用"></a>2. 雪碧图(css精灵)的作用</h3><p>减少HTTP请求数，提高加载性能<br>有一些情况下可以减少图片大小。（只是作用不是特别明显）</p>
-<h3 id="3-自定义字体的使用场景"><a href="#3-自定义字体的使用场景" class="headerlink" title="3.自定义字体的使用场景"></a>3.自定义字体的使用场景</h3><a id="more"></a>
-<p>宣传/品牌/banner等固定文案<br>字体图标</p>
-<h3 id="4-base64的使用"><a href="#4-base64的使用" class="headerlink" title="4. base64的使用"></a>4. base64的使用</h3><p>用于减少HTTP请求<br>适用于小图片<br>base64的体积约为原图的4/3</p>
-<h3 id="5-伪类和伪元素的区别"><a href="#5-伪类和伪元素的区别" class="headerlink" title="5. 伪类和伪元素的区别"></a>5. 伪类和伪元素的区别</h3><p>伪类表状态<br>伪元素是真的有元素<br>前者单冒号，后者双冒号</p>
-<h3 id="6-如何美化CheckBox"><a href="#6-如何美化CheckBox" class="headerlink" title="6. 如何美化CheckBox"></a>6. 如何美化CheckBox</h3><p>label[for]和id<br>隐藏原生input<br>写法：：checked + label</p>
+      <h2 id="实现时间的实时跳动"><a href="#实现时间的实时跳动" class="headerlink" title="实现时间的实时跳动"></a>实现时间的实时跳动</h2><h3 id="1-函数构造"><a href="#1-函数构造" class="headerlink" title="1. 函数构造"></a>1. 函数构造</h3><p>   <code>&lt;! --wxml--&gt;</code><br> <code>&lt;view  class=&quot;classname&quot;&gt;&lt;/view&gt;</code></p>
+<pre><code> &lt;!--js--&gt;
+const app = getApp(); //获取应用实例
 
+//获得util.js的函数,先模块化引用utils里面的js地址,reqiure(&apos;js地址&apos;)成一个面向对象
+var util = require(&apos;../../utils/util.js&apos;);
+
+Page({
+  data:{
+      Time:&apos;&apos;
+  },
+
+  getTime:function(e){
+      var that = this;
+      var currentTime = util.formatTime(new Date());
+  }
+})</code></pre><h4 id="但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。"><a href="#但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。" class="headerlink" title="但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。"></a>但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。</h4><h3 id="2-设置定时器，不断调用getnowDate函数"><a href="#2-设置定时器，不断调用getnowDate函数" class="headerlink" title="2.设置定时器，不断调用getnowDate函数"></a>2.设置定时器，不断调用getnowDate函数</h3><pre><code>    &lt;!--js--&gt;
+onLoad:function(options){
+  var that = this;
+  setInterval(function(){
+      that.setData({
+          Time: util.formatTime(new Date())
+      });    
+  },1000);    
+}</code></pre>
       
       <!-- reward -->
       
@@ -178,13 +199,15 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/04/09/CSS%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li></ul>
+
 
     </footer>
 
@@ -194,10 +217,19 @@
   
   <nav class="article-nav">
     
+      <a href="/2020/04/09/CSS%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            CSS基础问题
+          
+        </div>
+      </a>
     
-      <a href="/2019/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/" class="article-nav-link">
+    
+      <a href="/2019/06/09/%E4%B8%83%E5%A4%A7%E5%A5%87%E8%BF%B9%E4%B9%8B%E9%95%BF%E5%9F%8E/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">微信小程序日常笔记</div>
+        <div class="article-nav-title">七大奇迹之长城</div>
       </a>
     
   </nav>

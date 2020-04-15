@@ -143,6 +143,99 @@
 
 </article>
     
+    <article id="post-微信小程序日常笔记" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/"
+    >微信小程序日常笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/12/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2019-12-11T12:55:12.000Z" itemprop="datePublished">2019-12-11</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="实现时间的实时跳动"><a href="#实现时间的实时跳动" class="headerlink" title="实现时间的实时跳动"></a>实现时间的实时跳动</h2><h3 id="1-函数构造"><a href="#1-函数构造" class="headerlink" title="1. 函数构造"></a>1. 函数构造</h3><p>   <code>&lt;! --wxml--&gt;</code><br> <code>&lt;view  class=&quot;classname&quot;&gt;&lt;/view&gt;</code></p>
+<pre><code> &lt;!--js--&gt;
+const app = getApp(); //获取应用实例
+
+//获得util.js的函数,先模块化引用utils里面的js地址,reqiure(&apos;js地址&apos;)成一个面向对象
+var util = require(&apos;../../utils/util.js&apos;);
+
+Page({
+  data:{
+      Time:&apos;&apos;
+  },
+
+  getTime:function(e){
+      var that = this;
+      var currentTime = util.formatTime(new Date());
+  }
+})</code></pre><h4 id="但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。"><a href="#但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。" class="headerlink" title="但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。"></a>但是这样只能通过点击按钮去调用函数获取某一时刻的时间点，并不能实现时间的实时跳动。我们需要在onLoad函数里面设置一个定时器，每过一秒钟就调用一次getTime函数，从而获取到实时的时间。</h4><h3 id="2-设置定时器，不断调用getnowDate函数"><a href="#2-设置定时器，不断调用getnowDate函数" class="headerlink" title="2.设置定时器，不断调用getnowDate函数"></a>2.设置定时器，不断调用getnowDate函数</h3><pre><code>    &lt;!--js--&gt;
+onLoad:function(options){
+  var that = this;
+  setInterval(function(){
+      that.setData({
+          Time: util.formatTime(new Date())
+      });    
+  },1000);    
+}</code></pre>
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
     <article id="post-七大奇迹之长城" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -765,79 +858,14 @@ src="https://ghbtns.com/github-btn.html?user=AIZSQ521&repo=AIZSQ521.github.io&ty
 
 </article>
     
-    <article id="post-五岳之首泰山" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2013/05/01/%E4%BA%94%E5%B2%B3%E4%B9%8B%E9%A6%96%E6%B3%B0%E5%B1%B1/"
-    >五一五岳之首泰山</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2013/05/01/%E4%BA%94%E5%B2%B3%E4%B9%8B%E9%A6%96%E6%B3%B0%E5%B1%B1/" class="article-date">
-  <time datetime="2013-05-01T11:15:25.000Z" itemprop="datePublished">2013-05-01</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>4个小时的登高 回来轻了7斤。</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
   </article>
   
 
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
   
 </section>
 </div>
